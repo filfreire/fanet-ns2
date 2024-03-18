@@ -1,4 +1,4 @@
-# fanet
+# fanet-ns2
 
 filfreire's FANET (Flying Ad-Hoc Network) experiment for ns2 network simulator.
 
@@ -11,7 +11,7 @@ Report can be found [here (PDF format)](/report.pdf).
 - Install ns-2. Follow guide over at <https://filfreire.com/ns2>
   - Make sure `ns` is in your PATH
 - Patch ns-2 installation to add M2ANET and UM-OLSR. Follow guide over at <https://filfreire.com/ns2-fanet>
-- Clone this repository, e.g. `git clone https://github.com/filfreire/fanet.git` and switch to `fanet/` folder.
+- Clone this repository, e.g. `git clone https://github.com/filfreire/fanet-ns2.git` and switch to `fanet-ns2/` folder.
 
 This repository was tested on Ubuntu 22.04 virtual machine, and requires ns-2.35 with the patches mentioned above.
 
@@ -46,7 +46,7 @@ Then run the simulations either for AODV, DSDV and DSR:
 make fanet-3d
 ```
 
-Or run the simulations for OLSR (separate make ):
+Or run the simulations for OLSR (separate make target due to OLSR simulation taking a lot more time compared to the others):
 
 ```bash
 make fanet-3d-olsr
@@ -70,6 +70,6 @@ make fanet-3d-csv > results.csv
 
 ## Data analysis
 
-Example experiment data, used in the [report](/report.pdf) is available in [](/data-analysis/results-fanet-total.txt).
+Example experiment data, used in the [report](/report.pdf) is available in [data-analysis/results-fanet-total.txt](/data-analysis/results-fanet-total.txt).
 
 All data analysis was done in [Jupyter Notebooks](https://jupyter.org/) and is provided as-is in the [data-analysis/](/data-analysis/) folder.
